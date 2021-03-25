@@ -1,0 +1,142 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    font-family: "Poppins",sans-serif;
+    box-sizing: border-box;
+   
+}
+
+body{
+    width: 1440px;
+    
+    background-color: hsl(0, 0%, 98%);
+    font-size: 15px;
+    color: hsl(234, 12%, 34%);
+}
+
+/*HEADER STYLES*/
+.text-banner h1{
+
+    font-size: 2rem;
+}
+
+p{
+    color: hsl(229, 6%, 66%);
+}
+
+.text-banner h1:nth-child(1){
+    font-weight: 200;
+}
+
+.text-banner{
+    text-align: center;
+    margin: auto;
+    margin-top: 5%;
+    
+    width: 35%;
+}
+.text-banner h1:nth-child(2){
+    font-weight: 600;
+
+}
+
+/*HERO SECTION STYLES*/
+
+.hero-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "supervisor team calculator"
+                         "supervisor karma calculator";
+    row-gap: 10%;
+    width: 80%;
+    margin: auto;
+    padding-top: 5%;
+    
+}
+
+.cyan{
+    border-top: 5px solid hsl(180, 62%, 55%) ;
+}
+
+.red{
+    border-top: 5px solid hsl(0, 78%, 62%);
+}
+
+.orange{
+    border-top: 5px solid hsl(34, 97%, 64%) ;
+}
+
+.blue{
+    border-top: 5px solid hsl(212, 86%, 64%);
+}
+
+.supervisor{
+    grid-area: supervisor;
+    align-self: center;
+}
+.team{
+    grid-area: team;
+    
+}
+
+.karma{
+    grid-area: karma;
+}
+
+.calculator{
+    grid-area: calculator;
+    align-self: center;
+}
+.card-container{
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10%;
+    position: relative;
+    height: 250px;
+    width: 350px; 
+    -webkit-box-shadow: 10px 10px 45px 1px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 45px 1px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 45px 1px rgba(0,0,0,0.75);
+}
+
+.card-text h1{
+    font-weight: 600;
+
+}
+
+.card-text p{
+    font-size: 0.8rem;
+}
+
+.card-image{
+    text-align: right;
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    
+    
+}
+
+@media (max-width:375px){
+    body{width: 375px;}
+
+    .text-banner{
+        width: 80%;
+    }
+    .hero-section{
+        grid-template-areas: "supervisor"
+                             "team"
+                             "karma"
+                             "calculator"   ;
+        gap: 20px;
+      
+    }
+    .card-container{
+        width: 300px;}}
